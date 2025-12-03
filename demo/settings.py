@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vex4(pwh+szfj*fn^vczc(0%bz@^gq8$wow!6@_^1e@f$y*=(n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["djangofirst-k6c6.onrender.com","localhost","127.0.0.1","127.0.0.1:8000"]
 
 
 # Application definition
