@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            position: sticky;
+            top: 0;
+        }
+
+        nav .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffca28;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-top: 120px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 700;
+            animation: fadeIn 1s;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: #ffca28;
+            color: #000;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffeb3b;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MyWebsite</div>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/login/">Login</a></li>
+            <li><a href="/register/">Register</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>Create modern, beautiful, and responsive web pages using Django templates.</p>
+
+        <a href="/about/" class="btn">Learn More</a>
+    </div>
+
+</body>
+</html>

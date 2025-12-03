@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            position: sticky;
+            top: 0;
+        }
+
+        nav .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffca28;
+        }
+
+        /* Main Contact Section */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 100px auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 18px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .title {
+            font-size: 38px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            opacity: 0.9;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Contact Form */
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #ddd;
+        }
+
+        .btn {
+            width: 200px;
+            padding: 12px;
+            background: #ffca28;
+            color: #000;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: auto;
+            display: block;
+        }
+
+        .btn:hover {
+            background: #ffeb3b;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MyWebsite</div>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/login/">Login</a></li>
+            <li><a href="/register/">Register</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <div class="container">
+        <div class="card">
+
+            <h1 class="title">Contact Us</h1>
+            <p class="subtitle">Have questions? We'd love to hear from you!</p>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Your Name" required>
+
+                <input type="email" name="email" placeholder="Your Email" required>
+
+                <textarea name="message" placeholder="Your Message..." required></textarea>
+
+                <button class="btn" type="submit">Send Message</button>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
